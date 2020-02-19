@@ -1967,7 +1967,7 @@ while True:
 							description= '```' "조회자:" + message.author.display_name +"\n거래처:" + message.channel.name + ' ```',
 							color=0xddffff
 							)
-						await MakeSound('' + result + '', './sound/say')
+						await MakeSound(result, './sound/say')
 						await PlaySound(voice_client1, './sound/say.wav')
 						await client.get_channel(channel).send(embed=embed2, tts=False)
 					
