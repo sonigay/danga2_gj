@@ -1952,7 +1952,7 @@ while True:
 					################ 비하인드 ################ 
 					
 					if message.content.startswith(command[4]):
-						SearchID = message.content[len(command[4])+1:]
+						SearchID = hello[len(command[12])+1:]
 						gc = gspread.authorize(credentials)
 						wks = gc.open('GJ정책표관리').worksheet('비하인드')
 
