@@ -1962,7 +1962,7 @@ while True:
 							result2 = wks.acell('C1').value
 							result3 = wks.acell('D1').value
 							result4 = wks.acell('E1').value
-							result5 = wks.acell('E1').value
+							result5 = wks.acell('F1').value
 							tmp_sayMessage = message.content
 							sayMessage = tmp_sayMessage[len(command[4])+1:]
 
