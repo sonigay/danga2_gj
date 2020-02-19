@@ -1949,7 +1949,7 @@ while True:
 					await client.get_channel(channel).send(embed=embed2, tts=False)
 					
 					
-			################ 정산확인 ################ 
+			################ 비하인드 ################ 
 
 			if message.content.startswith(command[4]):
 				if basicSetting[12] !=""  :
@@ -1964,8 +1964,8 @@ while True:
 					sayMessage = tmp_sayMessage[len(command[12])+1:]
 
 					embed1 = discord.Embed(
-							title = ' :signal_strength:  ' + SearchID + ' 안내 ',
-							description= '**```css\n' + SearchID + ' 단가는 ' + result + '```**',
+							title = '비하인드 안내 ',
+							description= '**```css\n' + result + '```**',
 							color=0xddffff
 							)
 					embed2 = discord.Embed(
@@ -1974,7 +1974,7 @@ while True:
 							color=0xddffff
 							)
 					await client.get_channel(msg.channel.id).send(embed=embed1, tts=False)
-					await MakeSound('조회하신,' + sayMessage + '단가는' + result + '', './sound/say')
+					await MakeSound('' + sayMessage + '' + result + '', './sound/say')
 					await PlaySound(voice_client1, './sound/say.wav')
 					await client.get_channel(channel).send(embed=embed2, tts=False)
 					
