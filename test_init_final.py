@@ -1958,11 +1958,7 @@ while True:
 
 						wks.update_acell('A1', SearchID)
 							
-						result1 = wks.acell('B1').value
-						result2 = wks.acell('C1').value
-						result3 = wks.acell('D1').value
-						result4 = wks.acell('E1').value
-						result5 = wks.acell('F1').value
+						result = wks.acell('B1').value
 						tmp_sayMessage = message.content
 						sayMessage = tmp_sayMessage[len(command[4])+1:]
 
@@ -1971,15 +1967,7 @@ while True:
 							description= '```' "조회자:" + message.author.display_name +"\n거래처:" + message.channel.name + ' ```',
 							color=0xddffff
 							)
-						await MakeSound('' + result1 + '', './sound/say')
-						await PlaySound(voice_client1, './sound/say.wav')
-						await MakeSound('' + result2 + '', './sound/say')
-						await PlaySound(voice_client1, './sound/say.wav')
-						await MakeSound('' + result3 + '', './sound/say')
-						await PlaySound(voice_client1, './sound/say.wav')
-						await MakeSound('' + result4 + '', './sound/say')
-						await PlaySound(voice_client1, './sound/say.wav')
-						await MakeSound('' + result5 + '', './sound/say')
+						await MakeSound('' + result + '', './sound/say')
 						await PlaySound(voice_client1, './sound/say.wav')
 						await client.get_channel(channel).send(embed=embed2, tts=False)
 					
