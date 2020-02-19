@@ -1971,8 +1971,8 @@ while True:
 						color=0xddffff
 						)
 #				await client.get_channel(msg.channel.id).send(embed=embed1, tts=False)
-				await MakeSound('조회하신,' + sayMessage + '단가는' + result + '', './sound/say')
-				await PlaySound(voice_client1, './sound/say.wav')
+				await MakeSound('조회하신,' + sayMessage + '단가는' + result + '', './sound/say2')
+				await PlaySound(voice_client1, './sound/say2.wav')
 				await client.get_channel(channel).send(embed=embed2, tts=False)					
 					
 					
