@@ -1955,9 +1955,7 @@ while True:
 #				SearchID = hello[len(command[4])+1:]
 				gc = gspread.authorize(credentials)
 				wks = gc.open('GJ정책표관리').worksheet('비하인드')
-
-				wks.update_acell('A1')
-
+#				wks.update_acell('A1')
 				result = wks.acell('B1').value
 #				tmp_sayMessage = message.content
 #				sayMessage = tmp_sayMessage[len(command[12])+1:]
@@ -1968,7 +1966,7 @@ while True:
 #						color=0xddffff
 #						)
 				embed2 = discord.Embed(
-						title = SearchID + ' 비하인드 조회!! ',
+						title = ' 비하인드 조회!! ',
 						description= '```' "조회자:" + message.author.display_name +"\n거래처:" + message.channel.name + ' ```',
 						color=0xddffff
 						)
