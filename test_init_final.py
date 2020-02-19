@@ -1974,7 +1974,7 @@ while True:
 
 					embed1 = discord.Embed(
 							title = '비하인드 안내 ',
-							description= '**```css\n' + result + '```**',
+							description= '**```css\n' + result1 + result2 + result3 + result4 + result5 + result6 + result7 + result8 + result9 + result10 + '```**',
 							color=0xddffff
 							)
 					embed2 = discord.Embed(
@@ -1984,16 +1984,25 @@ while True:
 							)
 					await client.get_channel(msg.channel.id).send(embed=embed1, tts=False)
 					await MakeSound('' + sayMessage + '' + result1 + '', './sound/say')
-					await MakeSound('' + sayMessage + '' + result2 + '', './sound/say')
-					await MakeSound('' + sayMessage + '' + result3 + '', './sound/say')
-					await MakeSound('' + sayMessage + '' + result4 + '', './sound/say')
-					await MakeSound('' + sayMessage + '' + result5 + '', './sound/say')
-					await MakeSound('' + sayMessage + '' + result6 + '', './sound/say')
-					await MakeSound('' + sayMessage + '' + result7 + '', './sound/say')
-					await MakeSound('' + sayMessage + '' + result8 + '', './sound/say')
-					await MakeSound('' + sayMessage + '' + result9 + '', './sound/say')
-					await MakeSound('' + sayMessage + '' + result10 + '', './sound/say')
+					await MakeSound('' + sayMessage + '' + result2 + '', './sound/say2')
+					await MakeSound('' + sayMessage + '' + result3 + '', './sound/say3')
+					await MakeSound('' + sayMessage + '' + result4 + '', './sound/say4')
+					await MakeSound('' + sayMessage + '' + result5 + '', './sound/say5')
+					await MakeSound('' + sayMessage + '' + result6 + '', './sound/say6')
+					await MakeSound('' + sayMessage + '' + result7 + '', './sound/say7')
+					await MakeSound('' + sayMessage + '' + result8 + '', './sound/say8')
+					await MakeSound('' + sayMessage + '' + result9 + '', './sound/say9')
+					await MakeSound('' + sayMessage + '' + result10 + '', './sound/say10')
 					await PlaySound(voice_client1, './sound/say.wav')
+					await PlaySound(voice_client1, './sound/say2.wav')
+					await PlaySound(voice_client1, './sound/say3.wav')
+					await PlaySound(voice_client1, './sound/say4.wav')
+					await PlaySound(voice_client1, './sound/say5.wav')
+					await PlaySound(voice_client1, './sound/say6.wav')
+					await PlaySound(voice_client1, './sound/say7.wav')
+					await PlaySound(voice_client1, './sound/say8.wav')
+					await PlaySound(voice_client1, './sound/say9.wav')
+					await PlaySound(voice_client1, './sound/say10.wav')
 					await client.get_channel(channel).send(embed=embed2, tts=False)
 					
 					
