@@ -1951,37 +1951,37 @@ while True:
 					
 					################ 비하인드 ################ 
 					
-						if message.content.startswith(command[4]):
-							SearchID = message.content[len(command[4])+1:]
-							gc = gspread.authorize(credentials)
-							wks = gc.open('GJ정책표관리').worksheet('비하인드')
+					if message.content.startswith(command[4]):
+						SearchID = message.content[len(command[4])+1:]
+						gc = gspread.authorize(credentials)
+						wks = gc.open('GJ정책표관리').worksheet('비하인드')
 
-							wks.update_acell('A1', SearchID)
-								
-							result1 = wks.acell('B1').value
-							result2 = wks.acell('C1').value
-							result3 = wks.acell('D1').value
-							result4 = wks.acell('E1').value
-							result5 = wks.acell('F1').value
-							tmp_sayMessage = message.content
-							sayMessage = tmp_sayMessage[len(command[4])+1:]
+						wks.update_acell('A1', SearchID)
+							
+						result1 = wks.acell('B1').value
+						result2 = wks.acell('C1').value
+						result3 = wks.acell('D1').value
+						result4 = wks.acell('E1').value
+						result5 = wks.acell('F1').value
+						tmp_sayMessage = message.content
+						sayMessage = tmp_sayMessage[len(command[4])+1:]
 
-							embed2 = discord.Embed(
-								title = SearchID + '비하인드 조회!! ',
-								description= '```' "조회자:" + message.author.display_name +"\n거래처:" + message.channel.name + ' ```',
-								color=0xddffff
-								)
-							await MakeSound('' + result1 + '', './sound/say')
-							await PlaySound(voice_client1, './sound/say.wav')
-							await MakeSound('' + result2 + '', './sound/say')
-							await PlaySound(voice_client1, './sound/say.wav')
-							await MakeSound('' + result3 + '', './sound/say')
-							await PlaySound(voice_client1, './sound/say.wav')
-							await MakeSound('' + result4 + '', './sound/say')
-							await PlaySound(voice_client1, './sound/say.wav')
-							await MakeSound('' + result5 + '', './sound/say')
-							await PlaySound(voice_client1, './sound/say.wav')
-							await client.get_channel(channel).send(embed=embed2, tts=False)
+						embed2 = discord.Embed(
+							title = SearchID + '비하인드 조회!! ',
+							description= '```' "조회자:" + message.author.display_name +"\n거래처:" + message.channel.name + ' ```',
+							color=0xddffff
+							)
+						await MakeSound('' + result1 + '', './sound/say')
+						await PlaySound(voice_client1, './sound/say.wav')
+						await MakeSound('' + result2 + '', './sound/say')
+						await PlaySound(voice_client1, './sound/say.wav')
+						await MakeSound('' + result3 + '', './sound/say')
+						await PlaySound(voice_client1, './sound/say.wav')
+						await MakeSound('' + result4 + '', './sound/say')
+						await PlaySound(voice_client1, './sound/say.wav')
+						await MakeSound('' + result5 + '', './sound/say')
+						await PlaySound(voice_client1, './sound/say.wav')
+						await client.get_channel(channel).send(embed=embed2, tts=False)
 					
 					
 					
