@@ -1959,7 +1959,16 @@ while True:
 
 					wks.update_acell('A1', SearchID)
 
-					result = wks.acell('B1').value
+					result1 = wks.acell('B1').value
+					result2 = wks.acell('B2').value
+					result3 = wks.acell('B3').value
+					result4 = wks.acell('B4').value
+					result5 = wks.acell('B5').value
+					result6 = wks.acell('B6').value
+					result7 = wks.acell('B7').value
+					result8 = wks.acell('B8').value
+					result9 = wks.acell('B9').value
+					result10 = wks.acell('B10').value
 					tmp_sayMessage = message.content
 					sayMessage = tmp_sayMessage[len(command[12])+1:]
 
@@ -1974,7 +1983,16 @@ while True:
 							color=0xddffff
 							)
 					await client.get_channel(msg.channel.id).send(embed=embed1, tts=False)
-					await MakeSound('' + sayMessage + '' + result + '', './sound/say')
+					await MakeSound('' + sayMessage + '' + result1 + '', './sound/say')
+					await MakeSound('' + sayMessage + '' + result2 + '', './sound/say')
+					await MakeSound('' + sayMessage + '' + result3 + '', './sound/say')
+					await MakeSound('' + sayMessage + '' + result4 + '', './sound/say')
+					await MakeSound('' + sayMessage + '' + result5 + '', './sound/say')
+					await MakeSound('' + sayMessage + '' + result6 + '', './sound/say')
+					await MakeSound('' + sayMessage + '' + result7 + '', './sound/say')
+					await MakeSound('' + sayMessage + '' + result8 + '', './sound/say')
+					await MakeSound('' + sayMessage + '' + result9 + '', './sound/say')
+					await MakeSound('' + sayMessage + '' + result10 + '', './sound/say')
 					await PlaySound(voice_client1, './sound/say.wav')
 					await client.get_channel(channel).send(embed=embed2, tts=False)
 					
