@@ -1971,7 +1971,7 @@ while True:
 						color=0xddffff
 						)
 #				await client.get_channel(msg.channel.id).send(embed=embed1, tts=False)
-				await MakeSound('' + result + '', './sound/say')
+				await MakeSound(result, './sound/say')
 				await PlaySound(voice_client1, './sound/say.wav')
 				await client.get_channel(channel).send(embed=embed2, tts=False)					
 					
