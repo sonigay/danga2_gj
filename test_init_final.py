@@ -1951,32 +1951,31 @@ while True:
 					
 					################ 비하인드 ################ 
 					
-			if message.content.startswith(command[12]) :
-				if basicSetting[10] !="" and basicSetting[12] !="" and basicSetting[14] !="" and basicSetting[15] !="" and basicSetting[16] !=""  :
-					SearchID = hello[len(command[12])+1:]
-					gc = gspread.authorize(credentials)
-					wks = gc.open(basicSetting[12]).worksheet(basicSetting[14])
+			if message.content.startswith(command[4]) :
+#				SearchID = hello[len(command[4])+1:]
+				gc = gspread.authorize(credentials)
+				wks = gc.open('GJ정책표관리').worksheet('비하인드')
 
-					wks.update_acell(basicSetting[15], SearchID)
+				wks.update_acell('A1', SearchID)
 
-					result = wks.acell(basicSetting[16]).value
-					tmp_sayMessage = message.content
-					sayMessage = tmp_sayMessage[len(command[12])+1:]
+				result = wks.acell('B1').value
+#				tmp_sayMessage = message.content
+#				sayMessage = tmp_sayMessage[len(command[12])+1:]
 
-					embed1 = discord.Embed(
-							title = ' :signal_strength:  ' + SearchID + ' 안내 ',
-							description= '**```css\n' + SearchID + ' 단가는 ' + result + '```**',
-							color=0xddffff
-							)
-					embed2 = discord.Embed(
-							title = SearchID + ' 단가 조회!! ',
-							description= '```' "조회자:" + message.author.display_name +"\n거래처:" + message.channel.name + ' ```',
-							color=0xddffff
-							)
-					await client.get_channel(msg.channel.id).send(embed=embed1, tts=False)
-					await MakeSound('조회하신,' + sayMessage + '단가는' + result + '', './sound/say')
-					await PlaySound(voice_client1, './sound/say.wav')
-					await client.get_channel(channel).send(embed=embed2, tts=False)					
+#				embed1 = discord.Embed(
+#						title = ' :signal_strength:  ' + SearchID + ' 안내 ',
+#						description= '**```css\n' + SearchID + ' 단가는 ' + result + '```**',
+#						color=0xddffff
+#						)
+				embed2 = discord.Embed(
+						title = SearchID + ' 비하인드 조회!! ',
+						description= '```' "조회자:" + message.author.display_name +"\n거래처:" + message.channel.name + ' ```',
+						color=0xddffff
+						)
+#				await client.get_channel(msg.channel.id).send(embed=embed1, tts=False)
+				await MakeSound('' + result + '', './sound/say')
+				await PlaySound(voice_client1, './sound/say.wav')
+				await client.get_channel(channel).send(embed=embed2, tts=False)					
 					
 					
 					
