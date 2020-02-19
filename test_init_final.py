@@ -1974,15 +1974,21 @@ while True:
 
 					embed1 = discord.Embed(
 							title = '비하인드 안내 ',
-							description= '**```css\n' + result1 + result2 + result3 + result4 + result5 + result6 + result7 + result8 + result9 + result10 + '```**',
+							description= '**```css\n' + result1 + '\n' + result2 + '\n' + result3 + '\n' + result4 + '\n' + result5 + '\n' + result6 + '\n' + result7 + '\n' + result8 + '\n' + result9 + '\n' + result10 + '\n' + '```**',
 							color=0xddffff
 							)
 					embed2 = discord.Embed(
+							title = '비하인드 안내중... ',
+							description= '**```fix\n음성파일 생성중입니다.\n10초안에 끝낼게요 조금만 기다려주세요...\n파일이 생성되면 안내를 시작합니다.\n이어폰을 꽂아주시고 스피커 볼륨을 키워주세요.```**',
+							color=0xddffff
+							)					
+					embed3 = discord.Embed(
 							title = SearchID + ' 비하인드 조회!! ',
 							description= '```' "조회자:" + message.author.display_name +"\n거래처:" + message.channel.name + ' ```',
 							color=0xddffff
 							)
 					await client.get_channel(msg.channel.id).send(embed=embed1, tts=False)
+					await client.get_channel(msg.channel.id).send(embed=embed2, tts=False)
 					await MakeSound(" ," + result1, './sound/say')
 					await MakeSound(" ," + result2, './sound/say2')
 					await MakeSound(" ," + result3, './sound/say3')
@@ -2003,7 +2009,7 @@ while True:
 					await PlaySound(voice_client1, './sound/say8.wav')
 					await PlaySound(voice_client1, './sound/say9.wav')
 					await PlaySound(voice_client1, './sound/say10.wav')
-					await client.get_channel(channel).send(embed=embed2, tts=False)
+					await client.get_channel(channel).send(embed=embed3, tts=False)
 					
 					
 					
