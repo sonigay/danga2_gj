@@ -1956,7 +1956,7 @@ while True:
 				gc = gspread.authorize(credentials)
 				wks = gc.open('GJ정책표관리').worksheet('비하인드')
 
-				wks.update_acell('A1', SearchID)
+				wks.update_acell('A1')
 
 				result = wks.acell('B1').value
 #				tmp_sayMessage = message.content
